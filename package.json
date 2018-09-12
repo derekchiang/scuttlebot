@@ -1,39 +1,12 @@
 {
-  "_from": "scuttlebot",
-  "_id": "scuttlebot@11.4.4",
-  "_inBundle": false,
-  "_integrity": "sha512-+9G622W6j55cGUXgMDTqnj7dJiq7VEGAWnqf2VH5b0AprM8Y2jsN/NkX4HhCHTq1LZh4XP1Z4bO29G6KLmaalg==",
-  "_location": "/scuttlebot",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "scuttlebot",
-    "name": "scuttlebot",
-    "escapedName": "scuttlebot",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+  "name": "tenfold-scuttlebot",
+  "description": "network protocol layer for secure-scuttlebutt",
+  "version": "11.4.4",
+  "homepage": "https://github.com/ssbc/scuttlebot",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ssbc/scuttlebot.git"
   },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/scuttlebot/-/scuttlebot-11.4.4.tgz",
-  "_shasum": "00d26d255dd05a93f81d5ef8038c8138f27990de",
-  "_spec": "scuttlebot",
-  "_where": "/Users/derek/binary-mint/tenfold-broadcast",
-  "author": {
-    "name": "Paul Frazee",
-    "email": "pfrazee@gmail.com"
-  },
-  "bin": {
-    "sbot": "./bin.js",
-    "scuttlebot": "./bin.js"
-  },
-  "bugs": {
-    "url": "https://github.com/ssbc/scuttlebot/issues"
-  },
-  "bundleDependencies": false,
   "dependencies": {
     "atomic-file": "0.0.1",
     "bash-color": "~0.0.3",
@@ -49,7 +22,7 @@
     "mkdirp": "~0.5.0",
     "multiblob": "^1.13.0",
     "multicb": "^1.0.0",
-    "multiserver": "^1.12.0",
+    "multiserver": "^1.13.4",
     "muxrpc": "^6.4.0",
     "muxrpc-validation": "^2.0.0",
     "muxrpcli": "^1.0.0",
@@ -76,11 +49,11 @@
     "pull-stream-to-stream": "~1.3.0",
     "pull-stringify": "~1.2.2",
     "rimraf": "^2.4.2",
-    "secret-stack": "^4.1.0",
+    "secret-stack": "^4.2.1",
     "secure-scuttlebutt": "^18.2.0",
     "ssb-blobs": "^1.1.4",
     "ssb-client": "^4.5.7",
-    "ssb-config": "^2.0.0",
+    "ssb-config": "^2.3.0",
     "ssb-ebt": "^5.1.4",
     "ssb-friends": "^3.1.3",
     "ssb-keys": "^7.0.13",
@@ -93,8 +66,6 @@
     "stream-to-pull-stream": "^1.6.10",
     "zerr": "^1.0.0"
   },
-  "deprecated": false,
-  "description": "network protocol layer for secure-scuttlebutt",
   "devDependencies": {
     "cat-names": "~1.0.2",
     "dog-names": "~1.0.2",
@@ -103,17 +74,15 @@
     "ssb-msg-schemas": "~3.2.0",
     "tape": "~4.0.0"
   },
-  "homepage": "https://github.com/ssbc/scuttlebot",
-  "license": "MIT",
-  "name": "scuttlebot",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ssbc/scuttlebot.git"
+  "bin": {
+    "sbot": "./bin.js",
+    "scuttlebot": "./bin.js"
   },
   "scripts": {
-    "prepublishOnly": "npm ls && npm test",
     "start": "node bin server",
+    "prepublishOnly": "npm ls && npm test",
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
-  "version": "11.4.4"
+  "author": "Paul Frazee <pfrazee@gmail.com>",
+  "license": "MIT"
 }
